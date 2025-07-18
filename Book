@@ -1,0 +1,57 @@
+package beanclass;
+public class Book {
+	private String title;
+    private String author;
+    private int cost;
+    private int noOfPages;
+    private int bookid;
+    public Book() {}
+    public Book(String title, String author, int cost, int noOfPages,int bookid) {
+        this.title = title;
+        this.author = author;
+        this.cost = cost;
+        this.noOfPages = noOfPages;
+        this.bookid = bookid;
+    }
+    public void setTitle(String title)
+    {
+    	this.title = title;
+    }
+    public String getTitle()
+    {
+    	return title;
+    }
+    public String getAuthor()
+    {
+    	return author;
+    }
+    public void SetCost(int cost)
+    {
+    	this.cost = cost;
+    }
+    public int getCost()
+    {
+    	return cost;
+    }
+    public void SetNoOfPages(int noOfPages)
+    {
+    	this.noOfPages = noOfPages;
+    }
+    public int getNoOfPages()
+    {
+    	return noOfPages;
+    }
+    public int getBookId()
+    {
+    	return bookid;
+    }
+    public void display() {
+        System.out.println("Book title: " + getTitle());
+        System.out.println("Book author: " + getAuthor());
+        System.out.println("Book cost: " + getCost());
+        System.out.println("Book no.of.pages: " + getNoOfPages());
+        System.out.println("Book id"+getBookId());
+    }
+   
+    
+}
