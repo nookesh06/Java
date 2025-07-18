@@ -1,0 +1,68 @@
+package beanclass;
+
+public class Student {
+	private String name;
+	private int rollno;
+	private int marks;
+	private char gender;
+	private char section;
+	
+public Student() {}
+private void scria() {}
+public Student(String name,int rollno, int marks,char gender,char section){
+	this.name = name;
+	this.rollno = rollno;
+	this.marks = marks;
+	this.gender = gender;
+	this.section = section;
+}
+public void setName(String name)
+{
+	this.name = name;
+	
+}
+public String getName()
+{
+	return name;
+}
+public int getRollno()
+{
+	return rollno;
+}
+public void setMarks(int marks)
+{
+	this.marks = marks;
+}
+public int getMarks() {
+	return marks;
+}
+public char getGender()
+{
+	return gender;
+}
+public void setSection(char section)
+{
+	this.section = section;
+}
+public char getSection()
+{
+	return section;
+}
+public void display()
+{
+	System.out.println("Name of the student "+getName());
+	System.out.println("Rollno of the Student"+getRollno());
+	System.out.println("Marks of the student"+getMarks());
+	System.out.println("Gender of the student"+getGender());
+	System.out.println("section of the student"+getSection());
+}
+@Override
+public String toString()
+{
+	return "\n Name of the Student: "+getName()+"\n"
+			+"Rollno of the Student"+getRollno()+"\n"
+			+"Marks of the student"+getMarks()+"\n"
+			+"Gender of the student"+getGender()+"\n"
+			+"Section of the student"+getSection()+"\n";
+}
+}
