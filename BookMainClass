@@ -1,0 +1,57 @@
+package beanclass;
+import java.util.*;
+
+public class BookMainClass {
+    public static void main(String[] args) {
+        Book book1 = new Book("The Portrait of a Lady", "James", 350, 187, 01);
+        Book book2 = new Book("The God of Small Things", "Arundhati Roy", 650, 150, 02);
+        Book book3 = new Book("THANKYOU FOR LEAVING", "Shrijeet Shandilya", 245, 145, 03);
+        Book book4 = new Book("The Ambassadors, and The Golden Bowl", "James", 400, 200, 04);
+
+        ArrayList b= new ArrayList();
+        b.add(book1);
+        b.add(book2);
+        b.add(book3);
+        b.add(book4);
+        for (int i = 0; i < b.size(); i++) {
+            Book b1 = (Book) b.get(i);
+            if (b1.getAuthor().equals("James")) {
+                b1.display();
+            }
+        }
+       System.out.println("---------------------------------");
+        for (int i = 0; i < b.size(); i++) {
+            Book b1 = (Book) b.get(i);
+            if (b1.getCost() > 600) {
+                System.out.println("Book Author : " + b1.getAuthor());
+                System.out.println("Book Title  : " + b1.getTitle());
+            }
+        }
+        Book costliest = (Book) b.get(0); 
+        for (int i = 1; i < b.size(); i++) {
+            Book b1 = (Book) b.get(i);
+            if (b1.getCost() > costliest.getCost()) {
+                costliest = b1;
+            }
+        }
+
+        System.out.println("--------------------------------------");
+        System.out.println("Costliest Book Cost: " + costliest.getCost());
+        
+        System.out.println("----------------------------------------");
+        for (int i = 1; i < b.size(); i++) 
+        {
+        	
+            Book b1 = (Book) b.get(i);
+            if (b1.getCost()==650) 
+            {
+               b1.SetCost(900);
+               System.out.println("After updating the cost : "+b1.getCost());
+            }
+        }
+
+
+        
+        
+    }
+}
