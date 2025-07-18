@@ -1,0 +1,46 @@
+package beanclass;
+import java.util.*;
+public class StudentMainClass {
+public static void main(String[] args) {
+	Student s1 = new Student("nookesh",1,71000,'M','A');
+	Student s2 = new Student("Manikanta",2,99000,'M','A');
+	Student s3 = new Student("Raju",3,30000,'M','B');
+	Student s4 = new Student("Yesh",8,50000,'M','C');
+	ArrayList al = new ArrayList();
+	al.add(s1);
+	al.add(s2);
+	al.add(s3);
+	al.add(s4);
+	for(int i = 0;i<al.size();i++)
+	{
+		Object obj = al.get(i);
+		Student s = (Student)obj;
+		if(s.getSection()=='A')
+		{
+			System.out.println("Marks of the stdent: "+s.getMarks());
+		}
+	}
+	System.out.println("-------------------------------------");
+	for(int i = 0;i<al.size();i++)
+	{
+		Object obj = al.get(i);
+		Student s = (Student)obj;
+		if(s.getMarks()>6500)
+		{
+			System.out.println("Student name: "+s.getName());
+			System.out.println("Student rollno: "+s.getRollno());
+		}
+	}
+	System.out.println("--------------------------------------------");
+	for(int i = 0;i<al.size();i++)
+	{
+		Object obj = al.get(i);
+		Student s = (Student)obj;
+		if(s.getRollno()==8)
+		{
+			System.out.println("Gender of the Student: "+s.getGender());
+		}
+	}
+	
+}
+}
